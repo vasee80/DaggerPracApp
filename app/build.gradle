@@ -53,6 +53,14 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
+    // RxJava
+    def rxjava_version = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+
+    // Rx-Retrofit Call Adapter
+    def rxcalladapter_version = '2.5.0'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxcalladapter_version" // Retrofit call adapter
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
