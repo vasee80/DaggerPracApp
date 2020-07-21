@@ -22,7 +22,7 @@ class AppModule {
 
         @Singleton
         @Provides
-        fun provideRetrofitInstance(): Retrofit{
+        fun provideRetrofitInstance(): Retrofit {
             return Retrofit.Builder()
                 .baseUrl(AppConstants.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -40,7 +40,10 @@ class AppModule {
 
         @Singleton
         @Provides
-        fun provideGlideInstance(application: Application, requestOptions: RequestOptions): RequestManager{
+        fun provideGlideInstance(
+            application: Application,
+            requestOptions: RequestOptions
+        ): RequestManager {
             return Glide.with(application)
                 .setDefaultRequestOptions(requestOptions)
         }

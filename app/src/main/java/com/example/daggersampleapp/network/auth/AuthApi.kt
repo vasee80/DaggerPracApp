@@ -10,5 +10,5 @@ interface AuthApi {
     @GET("users/{id}")
     fun getUser(
         @Path("id") id: Int
-    ) : Flowable<User>
+    ): Flowable<User>
 }
