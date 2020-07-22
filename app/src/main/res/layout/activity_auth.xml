@@ -13,19 +13,21 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/login_logo"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo" />
 
     <EditText
         app:layout_constraintTop_toBottomOf="@+id/login_logo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:hint="User id"
+        android:hint="@string/userId"
         android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/user_id_input"
         android:inputType="text"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:autofillHints="@string/userId" />
 
     <Button
         app:layout_constraintTop_toBottomOf="@+id/user_id_input"
@@ -35,7 +37,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/login_button"
         android:layout_marginTop="15dp"
-        android:text="Login" />
+        android:text="@string/login" />
 
     <RelativeLayout
         android:layout_width="match_parent"

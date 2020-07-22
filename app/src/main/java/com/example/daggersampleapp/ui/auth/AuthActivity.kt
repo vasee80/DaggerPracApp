@@ -1,5 +1,6 @@
 package com.example.daggersampleapp.ui.auth
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.TextUtils
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.RequestManager
 import com.example.daggersampleapp.R
 import com.example.daggersampleapp.model.User
+import com.example.daggersampleapp.ui.home.HomeActivity
 import com.example.daggersampleapp.util.Resource
 import com.example.daggersampleapp.viewmodel.AppViewModelProviderFactory
 import dagger.android.support.DaggerAppCompatActivity
@@ -40,7 +42,7 @@ class AuthActivity : DaggerAppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_auth)
 
         userIdTxt = findViewById(R.id.user_id_input)
         progressBar = findViewById(R.id.progress_bar)
@@ -84,6 +86,9 @@ class AuthActivity : DaggerAppCompatActivity(), View.OnClickListener {
     private fun successResult(result: Resource<User>) {
         showProgressbar(false)
         Log.d(TAG, "successResult: ${result.data?.email}")
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun errorResult(result: Resource<User>) {

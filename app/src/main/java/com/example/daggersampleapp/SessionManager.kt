@@ -27,6 +27,6 @@ class SessionManager @Inject constructor() {
     }
 
     fun logout() {
-        cachedUser.value = Resource.Loading(null)
+        cachedUser.value = Resource.Logout(null)
     }
 }
