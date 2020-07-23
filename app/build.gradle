@@ -80,8 +80,9 @@ dependencies {
     implementation "android.arch.lifecycle:reactivestreams:$reactivestreams_version"
 
     // Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:2.3.0"
-    implementation "android.arch.navigation:navigation-ui-ktx:2.3.0"
+    def nav_version = "2.3.0"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
