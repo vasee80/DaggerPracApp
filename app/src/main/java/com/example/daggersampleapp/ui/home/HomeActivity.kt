@@ -6,6 +6,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import com.example.daggersampleapp.BaseActivity
 import com.example.daggersampleapp.R
+import com.example.daggersampleapp.ui.home.post.PostFragment
 
 class HomeActivity : BaseActivity() {
 
@@ -13,6 +14,13 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        loadProfileFragment()
+    }
+
+    private fun loadProfileFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_container, PostFragment())
+            .commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

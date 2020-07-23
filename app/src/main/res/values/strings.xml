@@ -5,4 +5,8 @@
     <string name="userId">User Id</string>
     <string name="home">Home</string>
     <string name="logo">Logo</string>
+    <string name="username">Username</string>
+    <string name="profile">Profile</string>
+    <string name="post">Post</string>
+    <string name="error_text">error</string>
 </resources>
